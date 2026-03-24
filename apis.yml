@@ -1,0 +1,7 @@
+aid: old-dominion-freight-line
+url: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/apis.yml
+modified: '2026-03-24'
+apis: []
+common:
+  - type: Website
+    url: https://www.old-dominion-freight-line.com
