@@ -1,7 +1,11 @@
 aid: old-dominion-freight-line
-url: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/apis.yml
 modified: '2026-03-24'
 apis: []
 common:
   - type: Website
     url: https://www.old-dominion-freight-line.com
+description: >-
+  Old Dominion Freight Line is a leading less-than-truckload motor carrier providing
+  regional, inter-regional, and national freight services in the United States.
