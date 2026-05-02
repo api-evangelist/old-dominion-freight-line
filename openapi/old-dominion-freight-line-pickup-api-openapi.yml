@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: ODFL Pickup API
+  summary: Electronic pickup request submission for Old Dominion Freight Line.
+  description: >-
+    The Old Dominion Freight Line Pickup API processes electronic pickup
+    requests for one or more shipments. The service returns pickup numbers
+    and PPIDs that shippers can use to confirm and track pickup requests
+    with ODFL.
+  version: '3.0'
+  contact:
+    name: ODFL API Support
+    email: api@odfl.com
+    url: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
+externalDocs:
+  description: ODFL Pickup API Development Guide
+  url: https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Pickup%20API%20Development%20Guide.pdf
+servers:
+  - url: https://www.odfl.com/wsPickup/v3
+    description: Old Dominion Freight Line Pickup API
+tags:
+  - name: Pickup
+    description: Submit and manage freight pickup requests.
+paths:
+  /createPickup:
+    post:
+      tags:
+        - Pickup
+      summary: Create a pickup request
+      description: >-
+        Submits an electronic pickup request for one or more shipments and
+        returns the assigned pickup number and PPIDs.
+      operationId: createPickup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PickupRequest'
+      responses:
+        '200':
+          description: Pickup request successfully created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PickupResponse'
+        '400':
+          description: Invalid request payload.
+        '401':
+          description: Authentication failed.
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    PickupRequest:
+      type: object
+      properties:
+        pickupLocation:
+          $ref: '#/components/schemas/Location'
+        readyTime:
+          type: string
+        closeTime:
+          type: string
+        shipments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Shipment'
+        specialInstructions:
+          type: string
+    PickupResponse:
+      type: object
+      properties:
+        pickupNumber:
+          type: string
+        ppids:
+          type: array
+          items:
+            type: string
+    Location:
+      type: object
+      properties:
+        name:
+          type: string
+        address1:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+        contactName:
+          type: string
+        contactPhone:
+          type: string
+    Shipment:
+      type: object
+      properties:
+        consigneeZip:
+          type: string
+        weight:
+          type: number
+        pieces:
+          type: integer
+        hazmat:
+          type: boolean
+security:
+  - BasicAuth: []

@@ -1,0 +1,89 @@
+openapi: 3.1.0
+info:
+  title: ODFL Tracking API
+  summary: Shipment tracking and status retrieval for Old Dominion Freight Line freight.
+  description: >-
+    The Old Dominion Freight Line Tracking API provides shipment status
+    information that can be used to integrate ODFL freight movement data
+    into shipper and partner systems. Status information includes pickup,
+    in-transit, delivery, and exception events identified by PRO number.
+  version: '2.0'
+  contact:
+    name: ODFL API Support
+    email: api@odfl.com
+    url: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
+externalDocs:
+  description: ODFL Tracking API Development Guide
+  url: https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Tracking%20API%20Development%20Guide.pdf
+servers:
+  - url: https://www.odfl.com/wsTracking/v2
+    description: Old Dominion Freight Line Tracking API
+tags:
+  - name: Tracking
+    description: Retrieve freight shipment status and movement events.
+paths:
+  /tracking/{proNumber}:
+    get:
+      tags:
+        - Tracking
+      summary: Get shipment tracking by PRO number
+      description: >-
+        Returns current status and history of tracking events for a given
+        ODFL PRO number.
+      operationId: getTrackingByPro
+      parameters:
+        - name: proNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ODFL PRO number identifying the shipment.
+      responses:
+        '200':
+          description: Tracking information successfully retrieved.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrackingResponse'
+        '404':
+          description: PRO number not found.
+        '401':
+          description: Authentication failed.
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    TrackingResponse:
+      type: object
+      properties:
+        proNumber:
+          type: string
+        status:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        estimatedDelivery:
+          type: string
+          format: date
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/TrackingEvent'
+    TrackingEvent:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        status:
+          type: string
+        location:
+          type: string
+        description:
+          type: string
+security:
+  - BasicAuth: []

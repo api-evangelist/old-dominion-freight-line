@@ -1,0 +1,117 @@
+openapi: 3.1.0
+info:
+  title: ODFL Bill of Lading API
+  summary: Electronic bill of lading creation for Old Dominion Freight Line shipments.
+  description: >-
+    The Old Dominion Freight Line Bill of Lading API submits electronic bills
+    of lading to the ODFL billing system. The service generates shipping
+    labels and BOL documents that can be printed and applied to freight,
+    enabling shippers to programmatically create freight documentation as
+    part of their shipping workflow.
+  version: '3.1'
+  contact:
+    name: ODFL API Support
+    email: api@odfl.com
+    url: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
+externalDocs:
+  description: ODFL Bill of Lading API Development Guide
+  url: https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Bill%20of%20Lading%20API%20Development%20Guide.pdf
+servers:
+  - url: https://www.odfl.com/wsBOL/v3
+    description: Old Dominion Freight Line Bill of Lading API
+tags:
+  - name: Bill of Lading
+    description: Submit electronic bills of lading and generate shipping labels and BOL documents.
+paths:
+  /createBOL:
+    post:
+      tags:
+        - Bill of Lading
+      summary: Create an electronic bill of lading
+      description: >-
+        Submits an electronic bill of lading to the ODFL billing system and
+        returns generated shipping label and BOL document references.
+      operationId: createBillOfLading
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BillOfLadingRequest'
+      responses:
+        '200':
+          description: Bill of lading successfully created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BillOfLadingResponse'
+        '400':
+          description: Invalid request payload.
+        '401':
+          description: Authentication failed.
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    BillOfLadingRequest:
+      type: object
+      properties:
+        shipper:
+          $ref: '#/components/schemas/Party'
+        consignee:
+          $ref: '#/components/schemas/Party'
+        billTo:
+          $ref: '#/components/schemas/Party'
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/FreightItem'
+        specialInstructions:
+          type: string
+    BillOfLadingResponse:
+      type: object
+      properties:
+        bolNumber:
+          type: string
+        proNumber:
+          type: string
+        labelUrl:
+          type: string
+          format: uri
+        bolDocumentUrl:
+          type: string
+          format: uri
+    Party:
+      type: object
+      properties:
+        name:
+          type: string
+        address1:
+          type: string
+        address2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+    FreightItem:
+      type: object
+      properties:
+        description:
+          type: string
+        weight:
+          type: number
+        pieces:
+          type: integer
+        nmfcClass:
+          type: string
+        hazmat:
+          type: boolean
+security:
+  - BasicAuth: []
