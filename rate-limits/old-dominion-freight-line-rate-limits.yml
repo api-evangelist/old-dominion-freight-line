@@ -4,7 +4,8 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Old Dominion Freight Line
 providerId: old-dominion-freight-line
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Freight
   - Less-Than-Truckload
@@ -12,93 +13,40 @@ tags:
   - Shipping
   - Transportation
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Old Dominion Freight Line API surface. Captures
-  per-tier quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values
-  to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: ODFL does not publish numeric rate limits on its developer/integrations page. Limits are
+  applied per API key under the customer agreement and surface as 429s when crossed. Most SOAP API endpoints
+  are scheduled to retire on December 31, 2025 — clients should migrate to REST.
+notes: Rate limits are not publicly documented. Update once ODFL publishes per-API ceilings.
+sources:
+  - https://www.odfl.com/us/en/resources/shipping-api-integrations.html
 responseCodes:
+  unauthorized: 401
+  forbidden: 403
   throttled: 429
-  quotaExceeded: 429
   serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
+  - name: Per API key
     scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - ODFL Bill of Lading API
-      - ODFL Pickup API
-      - ODFL Tracking API
-      - ODFL Document API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - ODFL Bill of Lading API
-      - ODFL Pickup API
-      - ODFL Tracking API
-      - ODFL Document API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - ODFL Bill of Lading API
-      - ODFL Pickup API
-      - ODFL Tracking API
-      - ODFL Document API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - ODFL Bill of Lading API
-      - ODFL Pickup API
-      - ODFL Tracking API
-      - ODFL Document API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
+    metric: varies
+    limit: not numerically published; subject to fair use under the ODFL customer agreement
     applies:
       - ODFL Bill of Lading API
       - ODFL Pickup API
       - ODFL Tracking API
       - ODFL Document API
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: SOAP retirement
+    description: 'Most SOAP API endpoints retire on December 31, 2025. Migrate to REST: BOL v3.1, Pickup
+      v3.0, Tracking v2.0, Document v1.0.'
+  - name: Backoff
+    description: Implement exponential backoff with jitter on 429/503 responses. Honor Retry-After if
+      present.
+  - name: Onboarding-issued credentials
+    description: API keys are provisioned through ODFL Customer Service (api@odfl.com / 1-800-235-5569)
+      and scoped to the customer's account.
+  - name: Polling cadence
+    description: For shipment tracking, batch tracking-number lookups and avoid sub-minute polling per
+      shipment to stay well within fair use.
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
