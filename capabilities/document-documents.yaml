@@ -1,0 +1,87 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: ODFL Document API — Documents
+  description: 'ODFL Document API — Documents. 1 operations. Lead operation: Retrieve documents for a PRO number. Self-contained
+    Naftiko capability covering one Old Dominion Freight Line business surface.'
+  tags:
+  - Old Dominion Freight Line
+  - Documents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OLD_DOMINION_FREIGHT_LINE_API_KEY: OLD_DOMINION_FREIGHT_LINE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: document-documents
+    baseUri: https://www.odfl.com/wsDocument/v1
+    description: ODFL Document API — Documents business capability. Self-contained, no shared references.
+    resources:
+    - name: documents-proNumber
+      path: /documents/{proNumber}
+      operations:
+      - name: getdocumentsbypro
+        method: GET
+        description: Retrieve documents for a PRO number
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: proNumber
+          in: path
+          type: string
+          description: ODFL PRO number identifying the shipment.
+          required: true
+        - name: documentType
+          in: query
+          type: string
+          description: Optional filter to retrieve a specific document type.
+    authentication:
+      type: basic
+      username: '{{env.OLD_DOMINION_FREIGHT_LINE_USER}}'
+      password: '{{env.OLD_DOMINION_FREIGHT_LINE_PASS}}'
+  exposes:
+  - type: rest
+    namespace: document-documents-rest
+    port: 8080
+    description: REST adapter for ODFL Document API — Documents. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/documents/{pronumber}
+      name: documents-pronumber
+      description: REST surface for documents-proNumber.
+      operations:
+      - method: GET
+        name: getdocumentsbypro
+        description: Retrieve documents for a PRO number
+        call: document-documents.getdocumentsbypro
+        with:
+          proNumber: rest.proNumber
+          documentType: rest.documentType
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: document-documents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for ODFL Document API — Documents. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: retrieve-documents-pro-number
+      description: Retrieve documents for a PRO number
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: document-documents.getdocumentsbypro
+      with:
+        proNumber: tools.proNumber
+        documentType: tools.documentType
+      outputParameters:
+      - type: object
+        mapping: $.
