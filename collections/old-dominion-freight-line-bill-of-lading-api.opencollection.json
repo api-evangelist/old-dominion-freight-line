@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ODFL Bill of Lading API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Bill of Lading",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an electronic bill of lading",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.odfl.com/wsBOL/v3/createBOL",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits an electronic bill of lading to the ODFL billing system and returns generated shipping label and BOL document references."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

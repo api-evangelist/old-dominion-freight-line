@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "77623220-4268-41ae-8c1a-7137fe0da4c1",
+      "name": "Bill of Lading",
+      "description": {
+        "content": "Submit electronic bills of lading and generate shipping labels and BOL documents.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6f177f91-3b91-4ed1-8753-4000f8d7d148",
+          "name": "Create an electronic bill of lading",
+          "request": {
+            "name": "Create an electronic bill of lading",
+            "description": {
+              "content": "Submits an electronic bill of lading to the ODFL billing system and returns generated shipping label and BOL document references.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "createBOL"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipper\": {\n    \"name\": \"<string>\",\n    \"address1\": \"<string>\",\n    \"address2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"consignee\": {\n    \"name\": \"<string>\",\n    \"address1\": \"<string>\",\n    \"address2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"billTo\": {\n    \"name\": \"<string>\",\n    \"address1\": \"<string>\",\n    \"address2\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"items\": [\n    {\n      \"description\": \"<string>\",\n      \"weight\": \"<number>\",\n      \"pieces\": \"<integer>\",\n      \"nmfcClass\": \"<string>\",\n      \"hazmat\": \"<boolean>\"\n    },\n    {\n      \"description\": \"<string>\",\n      \"weight\": \"<number>\",\n      \"pieces\": \"<integer>\",\n      \"nmfcClass\": \"<string>\",\n      \"hazmat\": \"<boolean>\"\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5c7c859e-5531-4274-b9c8-3b174575a9c1",
+              "name": "Bill of lading successfully created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createBOL"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"bolNumber\": \"string\",\n  \"proNumber\": \"string\",\n  \"labelUrl\": \"https://vzARDs.zftaEbcbxvMLbFci2gHHPRmd2fw9ZofLCnQoh3A2bBX\",\n  \"bolDocumentUrl\": \"http://MoRYRZTju.ocgtkX15SEUAk8x9TduhXks,,wCza9nM\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "59ef402e-15a7-4a2c-bac1-bf3a981b5377",
+              "name": "Invalid request payload.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createBOL"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "436737d3-87cd-46a8-80f3-54c88cca87ae",
+              "name": "Authentication failed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createBOL"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.odfl.com/wsBOL/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "447b524e-7275-451b-ba5e-61a3eb7574e5",
+    "name": "ODFL Bill of Lading API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Old Dominion Freight Line Bill of Lading API submits electronic bills of lading to the ODFL billing system. The service generates shipping labels and BOL documents that can be printed and applied to freight, enabling shippers to programmatically create freight documentation as part of their shipping workflow.\n\nContact Support:\n Name: ODFL API Support\n Email: api@odfl.com",
+      "type": "text/plain"
+    }
+  }
+}

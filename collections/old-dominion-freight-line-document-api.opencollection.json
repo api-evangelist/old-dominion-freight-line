@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ODFL Document API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve documents for a PRO number",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.odfl.com/wsDocument/v1/documents/:proNumber",
+            "params": [
+              {
+                "name": "proNumber",
+                "value": "",
+                "type": "path",
+                "description": "ODFL PRO number identifying the shipment."
+              },
+              {
+                "name": "documentType",
+                "value": "",
+                "type": "query",
+                "description": "Optional filter to retrieve a specific document type."
+              }
+            ]
+          },
+          "docs": "Returns the available PDF documents (bill of lading, delivery receipt) associated with the supplied ODFL PRO number."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

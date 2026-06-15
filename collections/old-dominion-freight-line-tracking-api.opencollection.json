@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ODFL Tracking API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tracking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get shipment tracking by PRO number",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.odfl.com/wsTracking/v2/tracking/:proNumber",
+            "params": [
+              {
+                "name": "proNumber",
+                "value": "",
+                "type": "path",
+                "description": "ODFL PRO number identifying the shipment."
+              }
+            ]
+          },
+          "docs": "Returns current status and history of tracking events for a given ODFL PRO number."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

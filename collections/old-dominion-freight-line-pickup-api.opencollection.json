@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ODFL Pickup API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pickup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a pickup request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.odfl.com/wsPickup/v3/createPickup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits an electronic pickup request for one or more shipments and returns the assigned pickup number and PPIDs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

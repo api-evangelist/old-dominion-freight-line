@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "d84f7d15-4696-4030-99ea-df75ee468877",
+      "name": "Pickup",
+      "description": {
+        "content": "Submit and manage freight pickup requests.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b76d7c36-feac-40bc-bb3e-0594ed8631eb",
+          "name": "Create a pickup request",
+          "request": {
+            "name": "Create a pickup request",
+            "description": {
+              "content": "Submits an electronic pickup request for one or more shipments and returns the assigned pickup number and PPIDs.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "createPickup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"<string>\",\n    \"address1\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"zip\": \"<string>\",\n    \"country\": \"<string>\",\n    \"contactName\": \"<string>\",\n    \"contactPhone\": \"<string>\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"<string>\",\n      \"weight\": \"<number>\",\n      \"pieces\": \"<integer>\",\n      \"hazmat\": \"<boolean>\"\n    },\n    {\n      \"consigneeZip\": \"<string>\",\n      \"weight\": \"<number>\",\n      \"pieces\": \"<integer>\",\n      \"hazmat\": \"<boolean>\"\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2da39968-740f-4dd4-8030-faf2f9907e45",
+              "name": "Pickup request successfully created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createPickup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"pickupNumber\": \"string\",\n  \"ppids\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b3f40446-cacd-4bc8-9cdc-7ef749d255bf",
+              "name": "Invalid request payload.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createPickup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e3de4e38-75ec-4f70-97e8-11f79b96e91c",
+              "name": "Authentication failed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "createPickup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.odfl.com/wsPickup/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9ae55ea1-3d81-49fb-90e7-96434d8da7a4",
+    "name": "ODFL Pickup API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Old Dominion Freight Line Pickup API processes electronic pickup requests for one or more shipments. The service returns pickup numbers and PPIDs that shippers can use to confirm and track pickup requests with ODFL.\n\nContact Support:\n Name: ODFL API Support\n Email: api@odfl.com",
+      "type": "text/plain"
+    }
+  }
+}
