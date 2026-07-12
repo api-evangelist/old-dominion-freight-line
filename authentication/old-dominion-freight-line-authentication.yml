@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/old-dominion-freight-line-bill-of-lading-api-openapi.yml, openapi/old-dominion-freight-line-document-api-openapi.yml,
+  openapi/old-dominion-freight-line-pickup-api-openapi.yml, openapi/old-dominion-freight-line-tracking-api-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  sources:
+  - openapi/old-dominion-freight-line-bill-of-lading-api-openapi.yml
+  - openapi/old-dominion-freight-line-document-api-openapi.yml
+  - openapi/old-dominion-freight-line-pickup-api-openapi.yml
+  - openapi/old-dominion-freight-line-tracking-api-openapi.yml

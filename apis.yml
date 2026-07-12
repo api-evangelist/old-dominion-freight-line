@@ -91,6 +91,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-document-api-openapi.yml
 common:
+  - type: DomainSecurity
+    url: security/old-dominion-freight-line-domain-security.yml
+  - type: Authentication
+    url: authentication/old-dominion-freight-line-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/old-dominion-freight-line
   - type: Website
