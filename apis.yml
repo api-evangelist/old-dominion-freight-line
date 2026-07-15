@@ -91,6 +91,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-document-api-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/old-dominion-freight-line-agentic-access.yml
   - type: DomainSecurity
     url: security/old-dominion-freight-line-domain-security.yml
   - type: Authentication
