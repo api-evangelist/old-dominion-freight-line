@@ -1,31 +1,38 @@
 {
   "item": [
     {
-      "id": "9e5b426e-6cad-47a5-8041-39cdbf7c19a6",
-      "name": "Tracking",
+      "id": "51686393-cee5-4c3d-b1b2-5fb0a93ac844",
+      "name": "Documents",
       "description": {
-        "content": "Retrieve freight shipment status and movement events.",
+        "content": "Retrieve PDF shipping documents associated with ODFL PRO numbers.",
         "type": "text/plain"
       },
       "item": [
         {
-          "id": "ffa2d963-75e0-41ee-aed1-87e154a2e125",
-          "name": "Get shipment tracking by PRO number",
+          "id": "18a2f1a0-9fc3-45ef-b129-b7f5a837bda5",
+          "name": "Retrieve documents for a PRO number",
           "request": {
-            "name": "Get shipment tracking by PRO number",
+            "name": "Retrieve documents for a PRO number",
             "description": {
-              "content": "Returns current status and history of tracking events for a given ODFL PRO number.",
+              "content": "Returns the available PDF documents (bill of lading, delivery receipt) associated with the supplied ODFL PRO number.",
               "type": "text/plain"
             },
             "url": {
               "path": [
-                "tracking",
+                "documents",
                 ":proNumber"
               ],
               "host": [
                 "{{baseUrl}}"
               ],
-              "query": [],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "documentType",
+                  "value": "<string>",
+                  "description": "Optional filter to retrieve a specific document type."
+                }
+              ],
               "variable": [
                 {
                   "disabled": false,
@@ -39,7 +46,7 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "application/json"
+                "value": "application/pdf"
               }
             ],
             "method": "GET",
@@ -47,18 +54,23 @@
           },
           "response": [
             {
-              "id": "3467762f-edfb-4324-b923-e23b99d6a2bc",
-              "name": "Tracking information successfully retrieved.",
+              "id": "e6320c77-805f-4ede-aec0-cc0e5cfaab0f",
+              "name": "PDF document(s) successfully returned.",
               "originalRequest": {
                 "url": {
                   "path": [
-                    "tracking",
+                    "documents",
                     ":proNumber"
                   ],
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
+                  "query": [
+                    {
+                      "key": "documentType",
+                      "value": "<string>"
+                    }
+                  ],
                   "variable": [
                     {
                       "disabled": false,
@@ -80,7 +92,7 @@
                   },
                   {
                     "key": "Accept",
-                    "value": "application/json"
+                    "value": "application/pdf"
                   }
                 ],
                 "method": "GET",
@@ -94,23 +106,28 @@
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"proNumber\": \"string\",\n  \"status\": \"string\",\n  \"origin\": \"string\",\n  \"destination\": \"string\",\n  \"estimatedDelivery\": \"2020-06-27\",\n  \"events\": [\n    {\n      \"timestamp\": \"2010-09-02T10:03:23.926Z\",\n      \"status\": \"string\",\n      \"location\": \"string\",\n      \"description\": \"string\"\n    },\n    {\n      \"timestamp\": \"2001-03-14T23:18:25.977Z\",\n      \"status\": \"string\",\n      \"location\": \"string\",\n      \"description\": \"string\"\n    }\n  ]\n}",
+              "body": "{\n  \"proNumber\": \"string\",\n  \"documents\": [\n    {\n      \"type\": \"string\",\n      \"url\": \"https://LyWUrtsDryuIfCVjNvIGThjusdkI.ousH7t0wolH6inKa0F1udTyF6V.M+vWlVzW3NF.fV6EpNFy2yAN-h+\",\n      \"contentBase64\": \"string\"\n    },\n    {\n      \"type\": \"string\",\n      \"url\": \"https://vDmn.uiXHP2nb,tr.e01OtAOcCsCT,kp,ELjE0,6lErFHUya-RrSG.9HJ.Xhot\",\n      \"contentBase64\": \"string\"\n    }\n  ]\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "3987f773-cf42-497a-a4a6-d609f7d2bedb",
+              "id": "27518c0b-ec10-4f7b-aef3-26db6ba45329",
               "name": "Authentication failed.",
               "originalRequest": {
                 "url": {
                   "path": [
-                    "tracking",
+                    "documents",
                     ":proNumber"
                   ],
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
+                  "query": [
+                    {
+                      "key": "documentType",
+                      "value": "<string>"
+                    }
+                  ],
                   "variable": [
                     {
                       "disabled": false,
@@ -147,18 +164,23 @@
               "_postman_previewlanguage": "text"
             },
             {
-              "id": "fa78d250-a320-4438-b2aa-e92e9e3c1136",
-              "name": "PRO number not found.",
+              "id": "0c6ca7b2-b4ce-4a79-b007-49081474d25e",
+              "name": "PRO number or document not found.",
               "originalRequest": {
                 "url": {
                   "path": [
-                    "tracking",
+                    "documents",
                     ":proNumber"
                   ],
                   "host": [
                     "{{baseUrl}}"
                   ],
-                  "query": [],
+                  "query": [
+                    {
+                      "key": "documentType",
+                      "value": "<string>"
+                    }
+                  ],
                   "variable": [
                     {
                       "disabled": false,
@@ -226,8 +248,8 @@
     ]
   },
   "info": {
-    "_postman_id": "2515a8b9-66d2-411b-8ba2-6d86256139bd",
-    "name": "ODFL Bill of Lading Tracking API",
+    "_postman_id": "0c0bf7e9-4e02-4142-b465-31f177cfbdab",
+    "name": "ODFL Bill of Lading Documents API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
       "content": "The Old Dominion Freight Line Bill of Lading API submits electronic bills of lading to the ODFL billing system. The service generates shipping labels and BOL documents that can be printed and applied to freight, enabling shippers to programmatically create freight documentation as part of their shipping workflow.\n\nContact Support:\n Name: ODFL API Support\n Email: api@odfl.com",

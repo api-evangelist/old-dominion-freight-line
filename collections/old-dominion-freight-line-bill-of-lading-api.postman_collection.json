@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "77623220-4268-41ae-8c1a-7137fe0da4c1",
+      "id": "2a5fda72-6763-4392-ad1b-75b870e42e86",
       "name": "Bill of Lading",
       "description": {
         "content": "Submit electronic bills of lading and generate shipping labels and BOL documents.",
@@ -9,7 +9,7 @@
       },
       "item": [
         {
-          "id": "6f177f91-3b91-4ed1-8753-4000f8d7d148",
+          "id": "1327df72-b831-42be-9a4d-6d6f97e9239e",
           "name": "Create an electronic bill of lading",
           "request": {
             "name": "Create an electronic bill of lading",
@@ -51,7 +51,7 @@
           },
           "response": [
             {
-              "id": "5c7c859e-5531-4274-b9c8-3b174575a9c1",
+              "id": "322ec45b-6c05-42d9-87ce-c0afd8c96e75",
               "name": "Bill of lading successfully created.",
               "originalRequest": {
                 "url": {
@@ -81,7 +81,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 4825.70971196332,\n      \"pieces\": 4175,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": true\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 3535.2886709268982,\n      \"pieces\": 4417,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -97,12 +97,12 @@
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"bolNumber\": \"string\",\n  \"proNumber\": \"string\",\n  \"labelUrl\": \"https://vzARDs.zftaEbcbxvMLbFci2gHHPRmd2fw9ZofLCnQoh3A2bBX\",\n  \"bolDocumentUrl\": \"http://MoRYRZTju.ocgtkX15SEUAk8x9TduhXks,,wCza9nM\"\n}",
+              "body": "{\n  \"bolNumber\": \"string\",\n  \"proNumber\": \"string\",\n  \"labelUrl\": \"http://QQPTCRLrzADxTCSAKKRmXkP.pidjj6J2solOCVXZ\",\n  \"bolDocumentUrl\": \"https://YRRAevFnlaBKsSQnVG.nkzeqPqIekOjOuXg8lyt,AJ5wJ9b\"\n}",
               "cookie": [],
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "59ef402e-15a7-4a2c-bac1-bf3a981b5377",
+              "id": "0e3ac4d1-d7e3-49ed-b0f2-b52be2086bb8",
               "name": "Invalid request payload.",
               "originalRequest": {
                 "url": {
@@ -128,7 +128,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 4825.70971196332,\n      \"pieces\": 4175,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": true\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 3535.2886709268982,\n      \"pieces\": 4417,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -149,7 +149,7 @@
               "_postman_previewlanguage": "text"
             },
             {
-              "id": "436737d3-87cd-46a8-80f3-54c88cca87ae",
+              "id": "60beb836-1437-49e3-9f17-d95996788452",
               "name": "Authentication failed.",
               "originalRequest": {
                 "url": {
@@ -175,7 +175,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 3809.1412070922993,\n      \"pieces\": 4840,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 7035.398632348888,\n      \"pieces\": 1655,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"shipper\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"consignee\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"billTo\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\"\n  },\n  \"items\": [\n    {\n      \"description\": \"string\",\n      \"weight\": 4825.70971196332,\n      \"pieces\": 4175,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": true\n    },\n    {\n      \"description\": \"string\",\n      \"weight\": 3535.2886709268982,\n      \"pieces\": 4417,\n      \"nmfcClass\": \"string\",\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -227,7 +227,7 @@
     ]
   },
   "info": {
-    "_postman_id": "447b524e-7275-451b-ba5e-61a3eb7574e5",
+    "_postman_id": "2604b769-98a3-4e6f-aa79-3e97148970c4",
     "name": "ODFL Bill of Lading API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {

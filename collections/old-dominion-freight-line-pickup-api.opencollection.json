@@ -1,8 +1,8 @@
 {
   "opencollection": "1.0.0",
   "info": {
-    "name": "ODFL Pickup API",
-    "version": "3.0"
+    "name": "ODFL Bill of Lading Pickup API",
+    "version": "3.1"
   },
   "request": {
     "auth": {
@@ -25,7 +25,7 @@
           },
           "http": {
             "method": "POST",
-            "url": "https://www.odfl.com/wsPickup/v3/createPickup",
+            "url": "https://www.odfl.com/wsBOL/v3/createPickup",
             "body": {
               "type": "json",
               "data": "{}"

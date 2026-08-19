@@ -1,7 +1,7 @@
 {
   "item": [
     {
-      "id": "d84f7d15-4696-4030-99ea-df75ee468877",
+      "id": "48278cc6-f55f-4ab8-a5e4-245bce9bddf9",
       "name": "Pickup",
       "description": {
         "content": "Submit and manage freight pickup requests.",
@@ -9,7 +9,7 @@
       },
       "item": [
         {
-          "id": "b76d7c36-feac-40bc-bb3e-0594ed8631eb",
+          "id": "458e09be-f039-4470-93c5-9dd44fb94e7d",
           "name": "Create a pickup request",
           "request": {
             "name": "Create a pickup request",
@@ -51,7 +51,7 @@
           },
           "response": [
             {
-              "id": "2da39968-740f-4dd4-8030-faf2f9907e45",
+              "id": "ed352dc2-bb6a-48b7-86d0-0d8278225f1d",
               "name": "Pickup request successfully created.",
               "originalRequest": {
                 "url": {
@@ -81,7 +81,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 5634.812726719218,\n      \"pieces\": 9692,\n      \"hazmat\": true\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 2172.232332307573,\n      \"pieces\": 3959,\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -102,7 +102,7 @@
               "_postman_previewlanguage": "json"
             },
             {
-              "id": "b3f40446-cacd-4bc8-9cdc-7ef749d255bf",
+              "id": "2a186154-f4b9-4ac7-9373-d7ea3daa93d1",
               "name": "Invalid request payload.",
               "originalRequest": {
                 "url": {
@@ -128,7 +128,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 5634.812726719218,\n      \"pieces\": 9692,\n      \"hazmat\": true\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 2172.232332307573,\n      \"pieces\": 3959,\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -149,7 +149,7 @@
               "_postman_previewlanguage": "text"
             },
             {
-              "id": "e3de4e38-75ec-4f70-97e8-11f79b96e91c",
+              "id": "c676dbae-3e54-4667-957a-085e9b602c73",
               "name": "Authentication failed.",
               "originalRequest": {
                 "url": {
@@ -175,7 +175,7 @@
                 "method": "POST",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 7720.0916629033845,\n      \"pieces\": 6609,\n      \"hazmat\": false\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 3915.728894470405,\n      \"pieces\": 4672,\n      \"hazmat\": true\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
+                  "raw": "{\n  \"pickupLocation\": {\n    \"name\": \"string\",\n    \"address1\": \"string\",\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"country\": \"string\",\n    \"contactName\": \"string\",\n    \"contactPhone\": \"string\"\n  },\n  \"readyTime\": \"<string>\",\n  \"closeTime\": \"<string>\",\n  \"shipments\": [\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 5634.812726719218,\n      \"pieces\": 9692,\n      \"hazmat\": true\n    },\n    {\n      \"consigneeZip\": \"string\",\n      \"weight\": 2172.232332307573,\n      \"pieces\": 3959,\n      \"hazmat\": false\n    }\n  ],\n  \"specialInstructions\": \"<string>\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -209,7 +209,7 @@
   "variable": [
     {
       "type": "string",
-      "value": "https://www.odfl.com/wsPickup/v3",
+      "value": "https://www.odfl.com/wsBOL/v3",
       "key": "baseUrl"
     }
   ],
@@ -227,11 +227,11 @@
     ]
   },
   "info": {
-    "_postman_id": "9ae55ea1-3d81-49fb-90e7-96434d8da7a4",
-    "name": "ODFL Pickup API",
+    "_postman_id": "77136903-0ed3-4e1c-93a6-88b7d5599ff2",
+    "name": "ODFL Bill of Lading Pickup API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
-      "content": "The Old Dominion Freight Line Pickup API processes electronic pickup requests for one or more shipments. The service returns pickup numbers and PPIDs that shippers can use to confirm and track pickup requests with ODFL.\n\nContact Support:\n Name: ODFL API Support\n Email: api@odfl.com",
+      "content": "The Old Dominion Freight Line Bill of Lading API submits electronic bills of lading to the ODFL billing system. The service generates shipping labels and BOL documents that can be printed and applied to freight, enabling shippers to programmatically create freight documentation as part of their shipping workflow.\n\nContact Support:\n Name: ODFL API Support\n Email: api@odfl.com",
       "type": "text/plain"
     }
   }
