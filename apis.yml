@@ -114,6 +114,9 @@ apis:
     url: >-
       https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Document%20API%20Development%20Guide.pdf
 common:
+  - type: CapabilityMap
+    url: capabilities/old-dominion-freight-line-capability-edges.yml
+    name: Old Dominion Freight Line Business Capability Map
   - type: AgenticAccess
     url: agentic-access/old-dominion-freight-line-agentic-access.yml
   - type: DomainSecurity

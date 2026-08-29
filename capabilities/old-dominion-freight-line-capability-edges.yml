@@ -1,0 +1,54 @@
+slug: old-dominion-freight-line
+provider: Old Dominion Freight Line
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Transportation & Logistics
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Bill of Lading
+  spec_file: old-dominion-freight-line-bill-of-lading-api-openapi.yml
+  capability_id: BC-2500
+  capability_id_l1: BC-2500
+  capability_name: Cargo Documentation Management
+  confidence: 0.9
+  evidence: POST /createBOL createBillOfLading 'Create an electronic bill of lading'; 'submits electronic
+    bills of lading to the ODFL billing system. The service generates shipping labels and BOL documents'
+  reason: Plainly issuance of cargo transport documentation. Left at L1 because this is a US LTL road
+    bill of lading, which straddles the ocean-BOL and road-consignment-note sub-capabilities.
+- tag: Tracking
+  spec_file: old-dominion-freight-line-tracking-api-openapi.yml
+  capability_id: BC-2510.20
+  capability_id_l1: BC-2510
+  capability_name: Shipment Tracking Management
+  confidence: 0.9
+  evidence: GET /tracking/{proNumber} getTrackingByPro 'Get shipment tracking by PRO number'; schemas
+    TrackingResponse, TrackingEvent
+  reason: Carrier-side resolution and exposure of shipment status/events to shippers — shipment tracking,
+    no other reading fits.
+- tag: Pickup
+  spec_file: old-dominion-freight-line-pickup-api-openapi.yml
+  capability_id: BC-2420.30
+  capability_id_l1: BC-2420
+  capability_name: Pickup and Drayage Operations Management
+  confidence: 0.8
+  evidence: POST /createPickup createPickup 'Create a pickup request'; schemas PickupRequest, Shipment,
+    Location
+  reason: Requesting a carrier pickup at a shipper location is first-mile pickup operations for an LTL
+    carrier. Some ambiguity versus treating it as a capacity booking, hence 0.8.
+- tag: Documents
+  spec_file: old-dominion-freight-line-documents-api-openapi.yml
+  capability_id: BC-2500
+  capability_id_l1: BC-2500
+  capability_name: Cargo Documentation Management
+  confidence: 0.7
+  evidence: GET /documents/{proNumber} getDocumentsByPro 'Retrieve documents for a PRO number'
+  reason: Retrieval of shipment-level transport documents against a carrier PRO number, i.e. lifecycle
+    access to cargo documentation. Sub-capability not identifiable since the document types are not enumerated.
