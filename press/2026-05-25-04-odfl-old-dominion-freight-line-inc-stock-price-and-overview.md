@@ -1,7 +1,9 @@
 ---
 title: ODFL Old Dominion Freight Line, Inc. Stock Price & Overview
 url: https://seekingalpha.com/symbol/ODFL
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Old Dominion Freight Line" press release artificial intelligence'
 position: 4
 source: serpapi-google

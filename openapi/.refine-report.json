@@ -1,20 +1,30 @@
 {
   "provider": "old-dominion-freight-line",
   "sources": [
+    "_original/old-dominion-freight-line-document-api-openapi.yml",
     "old-dominion-freight-line-bill-of-lading-api-openapi.yml",
-    "old-dominion-freight-line-documents-api-openapi.yml",
     "old-dominion-freight-line-pickup-api-openapi.yml",
     "old-dominion-freight-line-tracking-api-openapi.yml"
   ],
   "outputs": [
-    "old-dominion-freight-line-bill-of-lading-api-openapi.yml",
     "old-dominion-freight-line-documents-api-openapi.yml",
+    "old-dominion-freight-line-bill-of-lading-api-openapi.yml",
     "old-dominion-freight-line-pickup-api-openapi.yml",
     "old-dominion-freight-line-tracking-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
-  "warnings": [],
-  "notes": [],
-  "skipped": []
+  "warnings": [
+    "old-dominion-freight-line-bill-of-lading-api-openapi.yml: previously refined output kept for 1 operation(s) no archived document covers (e.g. /createBOL post); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth.",
+    "old-dominion-freight-line-pickup-api-openapi.yml: previously refined output kept for 1 operation(s) no archived document covers (e.g. /createPickup post); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth.",
+    "old-dominion-freight-line-tracking-api-openapi.yml: previously refined output kept for 1 operation(s) no archived document covers (e.g. /tracking/{proNumber} get); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth."
+  ],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "old-dominion-freight-line-document-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "old-dominion-freight-line-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

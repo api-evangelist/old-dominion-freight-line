@@ -1,16 +1,16 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: ODFL Bill of Lading Documents API
-  summary: Electronic bill of lading creation for Old Dominion Freight Line shipments.
-  description: The Old Dominion Freight Line Bill of Lading API submits electronic bills of lading to the ODFL billing system. The service generates shipping labels and BOL documents that can be printed and applied to freight, enabling shippers to programmatically create freight documentation as part of their shipping workflow.
-  version: '3.1'
+  title: ODFL Document Documents API
+  summary: Retrieval of shipment PDF documents from Old Dominion Freight Line.
+  description: The Old Dominion Freight Line Document API retrieves PDF documents associated with shipments, including bills of lading and delivery receipts, by PRO number. The service is used to programmatically pull shipment documentation from ODFL into shipper or partner systems.
+  version: '1.0'
   contact:
     name: ODFL API Support
     email: api@odfl.com
     url: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
 servers:
-- url: https://www.odfl.com/wsBOL/v3
-  description: Old Dominion Freight Line Bill of Lading API
+- url: https://www.odfl.com/wsDocument/v1
+  description: Old Dominion Freight Line Document API
 security:
 - BasicAuth: []
 tags:
@@ -83,5 +83,5 @@ components:
       type: http
       scheme: basic
 externalDocs:
-  description: ODFL Bill of Lading API Development Guide
-  url: https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Bill%20of%20Lading%20API%20Development%20Guide.pdf
+  description: ODFL Document API Development Guide
+  url: https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Document%20API%20Development%20Guide.pdf

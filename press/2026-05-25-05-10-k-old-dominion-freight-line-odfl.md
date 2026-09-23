@@ -1,7 +1,9 @@
 ---
 title: 10-K - Old Dominion Freight Line - ODFL
 url: https://ir.odfl.com/sec-filings/all-sec-filings/content/0000950170-25-026661/odfl-20241231.htm
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Old Dominion Freight Line" press release artificial intelligence'
 position: 5
 source: serpapi-google
