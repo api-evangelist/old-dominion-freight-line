@@ -43,17 +43,6 @@ paths:
           description: Authentication failed.
 components:
   schemas:
-    Shipment:
-      type: object
-      properties:
-        consigneeZip:
-          type: string
-        weight:
-          type: number
-        pieces:
-          type: integer
-        hazmat:
-          type: boolean
     Location:
       type: object
       properties:
@@ -73,6 +62,26 @@ components:
           type: string
         contactPhone:
           type: string
+    PickupResponse:
+      type: object
+      properties:
+        pickupNumber:
+          type: string
+        ppids:
+          type: array
+          items:
+            type: string
+    Shipment:
+      type: object
+      properties:
+        consigneeZip:
+          type: string
+        weight:
+          type: number
+        pieces:
+          type: integer
+        hazmat:
+          type: boolean
     PickupRequest:
       type: object
       properties:
@@ -88,15 +97,6 @@ components:
             $ref: '#/components/schemas/Shipment'
         specialInstructions:
           type: string
-    PickupResponse:
-      type: object
-      properties:
-        pickupNumber:
-          type: string
-        ppids:
-          type: array
-          items:
-            type: string
   securitySchemes:
     BasicAuth:
       type: http

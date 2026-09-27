@@ -58,15 +58,6 @@ paths:
           description: Authentication failed.
 components:
   schemas:
-    DocumentResponse:
-      type: object
-      properties:
-        proNumber:
-          type: string
-        documents:
-          type: array
-          items:
-            $ref: '#/components/schemas/Document'
     Document:
       type: object
       properties:
@@ -78,6 +69,15 @@ components:
         contentBase64:
           type: string
           format: byte
+    DocumentResponse:
+      type: object
+      properties:
+        proNumber:
+          type: string
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/Document'
   securitySchemes:
     BasicAuth:
       type: http

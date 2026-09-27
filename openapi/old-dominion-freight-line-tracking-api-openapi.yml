@@ -44,18 +44,6 @@ paths:
           description: Authentication failed.
 components:
   schemas:
-    TrackingEvent:
-      type: object
-      properties:
-        timestamp:
-          type: string
-          format: date-time
-        status:
-          type: string
-        location:
-          type: string
-        description:
-          type: string
     TrackingResponse:
       type: object
       properties:
@@ -74,6 +62,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/TrackingEvent'
+    TrackingEvent:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        status:
+          type: string
+        location:
+          type: string
+        description:
+          type: string
   securitySchemes:
     BasicAuth:
       type: http

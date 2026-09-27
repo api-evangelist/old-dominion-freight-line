@@ -32,6 +32,13 @@ position: Consuming
 access: 3rd-Party
 tags:
   - Freight
+  - LTL
+  - Logistics
+  - Shipping
+  - Transportation
+  - Fortune 1000
+tags_raw:
+  - Freight
   - Less-Than-Truckload
   - Logistics
   - Shipping
@@ -51,7 +58,6 @@ apis:
     Submits electronic bills of lading to the Old Dominion Freight Line billing system, generating shipping
     labels and BOL documents. Used by shippers to programmatically create freight documentation.
   humanURL: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
-  baseURL: https://www.odfl.com
   tags:
   - Bill of Lading
   - Documents
@@ -70,7 +76,6 @@ apis:
     Processes electronic pickup requests for one or more shipments. Returns pickup numbers and PPIDs that
     shippers use to confirm and track pickup requests with Old Dominion Freight Line.
   humanURL: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
-  baseURL: https://www.odfl.com
   tags:
   - Freight
   - Logistics
@@ -89,7 +94,6 @@ apis:
     Provides shipment status information for ODFL freight movements. Used to integrate real-time and historical
     freight tracking data into shipper and partner systems.
   humanURL: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
-  baseURL: https://www.odfl.com
   tags:
   - Freight
   - Shipping
@@ -105,7 +109,6 @@ apis:
   name: Old Dominion Freight Line Documents API
   description: Retrieve PDF shipping documents associated with ODFL PRO numbers.
   humanURL: https://www.odfl.com/us/en/resources/shipping-api-integrations.html
-  baseURL: https://www.odfl.com
   tags:
   - Documents
   properties:
