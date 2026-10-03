@@ -43,6 +43,19 @@ paths:
           description: Authentication failed.
 components:
   schemas:
+    BillOfLadingResponse:
+      type: object
+      properties:
+        bolNumber:
+          type: string
+        proNumber:
+          type: string
+        labelUrl:
+          type: string
+          format: uri
+        bolDocumentUrl:
+          type: string
+          format: uri
     Party:
       type: object
       properties:
@@ -60,19 +73,6 @@ components:
           type: string
         country:
           type: string
-    BillOfLadingResponse:
-      type: object
-      properties:
-        bolNumber:
-          type: string
-        proNumber:
-          type: string
-        labelUrl:
-          type: string
-          format: uri
-        bolDocumentUrl:
-          type: string
-          format: uri
     FreightItem:
       type: object
       properties:

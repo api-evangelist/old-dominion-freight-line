@@ -62,15 +62,6 @@ components:
           type: string
         contactPhone:
           type: string
-    PickupResponse:
-      type: object
-      properties:
-        pickupNumber:
-          type: string
-        ppids:
-          type: array
-          items:
-            type: string
     Shipment:
       type: object
       properties:
@@ -97,6 +88,15 @@ components:
             $ref: '#/components/schemas/Shipment'
         specialInstructions:
           type: string
+    PickupResponse:
+      type: object
+      properties:
+        pickupNumber:
+          type: string
+        ppids:
+          type: array
+          items:
+            type: string
   securitySchemes:
     BasicAuth:
       type: http
