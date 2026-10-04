@@ -43,25 +43,15 @@ paths:
           description: Authentication failed.
 components:
   schemas:
-    Location:
+    PickupResponse:
       type: object
       properties:
-        name:
+        pickupNumber:
           type: string
-        address1:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        zip:
-          type: string
-        country:
-          type: string
-        contactName:
-          type: string
-        contactPhone:
-          type: string
+        ppids:
+          type: array
+          items:
+            type: string
     Shipment:
       type: object
       properties:
@@ -88,15 +78,25 @@ components:
             $ref: '#/components/schemas/Shipment'
         specialInstructions:
           type: string
-    PickupResponse:
+    Location:
       type: object
       properties:
-        pickupNumber:
+        name:
           type: string
-        ppids:
-          type: array
-          items:
-            type: string
+        address1:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+        contactName:
+          type: string
+        contactPhone:
+          type: string
   securitySchemes:
     BasicAuth:
       type: http

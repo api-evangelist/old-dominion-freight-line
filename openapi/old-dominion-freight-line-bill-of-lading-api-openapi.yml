@@ -56,6 +56,19 @@ components:
         bolDocumentUrl:
           type: string
           format: uri
+    FreightItem:
+      type: object
+      properties:
+        description:
+          type: string
+        weight:
+          type: number
+        pieces:
+          type: integer
+        nmfcClass:
+          type: string
+        hazmat:
+          type: boolean
     Party:
       type: object
       properties:
@@ -73,19 +86,6 @@ components:
           type: string
         country:
           type: string
-    FreightItem:
-      type: object
-      properties:
-        description:
-          type: string
-        weight:
-          type: number
-        pieces:
-          type: integer
-        nmfcClass:
-          type: string
-        hazmat:
-          type: boolean
     BillOfLadingRequest:
       type: object
       properties:
