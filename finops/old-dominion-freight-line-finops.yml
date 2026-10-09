@@ -122,10 +122,8 @@ apis:
 unitEconomics:
   - name: Polls per shipment
     metric: tracking_polls / active_shipments
-    target: minimize via reduced polling cadence
   - name: Integration cost per shipment
     metric: integration_engineering_cost / shipments_processed
-    target: declining over time via reuse
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
