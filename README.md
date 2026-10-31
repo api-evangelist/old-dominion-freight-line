@@ -1,4 +1,4 @@
-# Old Dominion Freight Line (old-dominion-freight-line)
+# Old Dominion Freight Line
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,144 +66,119 @@
 
 Old Dominion Freight Line is a leading less-than-truckload (LTL) motor carrier providing regional, inter-regional, and national freight services in the United States. ODFL offers a suite of REST web services for shippers and partners to integrate freight booking, pickup, tracking, document retrieval, and electronic bill of lading capabilities directly into their systems.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/apis.yml)
+**Areas:** Freight · LTL · Logistics · Shipping · Transportation · Fortune 1000
 
-## Scope
+## Old Dominion Freight Line on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Old Dominion Freight Line is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/old-dominion-freight-line/](https://apis.io/providers/old-dominion-freight-line/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Freight
-- Less-Than-Truckload
-- Logistics
-- Shipping
-- Transportation
+- [ODFL Bill of Lading API](https://apis.io/apis/old-dominion-freight-line/bill-of-lading-api/) — Submits electronic bills of lading to the Old Dominion Freight Line billing system, generating shipping labels and BOL documents. Used by shippers to…
+- [ODFL Pickup API](https://apis.io/apis/old-dominion-freight-line/pickup-api/) — Processes electronic pickup requests for one or more shipments. Returns pickup numbers and PPIDs that shippers use to confirm and track pickup requests with…
+- [ODFL Tracking API](https://apis.io/apis/old-dominion-freight-line/tracking-api/) — Provides shipment status information for ODFL freight movements. Used to integrate real-time and historical freight tracking data into shipper and partner…
+- [Old Dominion Freight Line Documents API](https://apis.io/apis/old-dominion-freight-line/old-dominion-freight-line-documents-api/) — Retrieve PDF shipping documents associated with ODFL PRO numbers.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-24
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### ODFL Bill of Lading API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Submits electronic bills of lading to the Old Dominion Freight Line billing system, generating shipping labels and BOL documents. Used by shippers to programmatically create freight documentation.
+- [Old Dominion Freight Line Agentic Access](https://apis.io/agentic-access/old-dominion-freight-line/old-dominion-freight-line-agentic-access/)
 
-- **Human URL:** [https://www.odfl.com/us/en/resources/shipping-api-integrations.html](https://www.odfl.com/us/en/resources/shipping-api-integrations.html)
-- **Base URL:** `https://www.odfl.com`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Bill of Lading
-- Documents
-- Freight
-- Shipping
+- [ODFL Bill of Lading API](https://apis.io/collections/old-dominion-freight-line/open-old-dominion-freight-line-bill-of-lading-api/)
+- [ODFL Document API](https://apis.io/collections/old-dominion-freight-line/open-old-dominion-freight-line-document-api/)
+- [ODFL Bill of Lading Documents API](https://apis.io/collections/old-dominion-freight-line/open-old-dominion-freight-line-documents-api/)
+- [ODFL Bill of Lading Pickup API](https://apis.io/collections/old-dominion-freight-line/open-old-dominion-freight-line-pickup-api/)
+- [ODFL Bill of Lading Tracking API](https://apis.io/collections/old-dominion-freight-line/open-old-dominion-freight-line-tracking-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Bill%20of%20Lading%20API%20Development%20Guide.pdf)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-bill-of-lading-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/old-dominion-freight-line-bill-of-lading-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-bill-of-lading-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-document-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-document-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-pickup-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-pickup-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-tracking-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-tracking-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### ODFL Pickup API
+- [Old Dominion Freight Line Authentication](https://apis.io/security/old-dominion-freight-line/old-dominion-freight-line-authentication/)
+- [Old Dominion Freight Line Domain Security](https://apis.io/security/old-dominion-freight-line/old-dominion-freight-line-domain-security/)
 
-Processes electronic pickup requests for one or more shipments. Returns pickup numbers and PPIDs that shippers use to confirm and track pickup requests with Old Dominion Freight Line.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://www.odfl.com/us/en/resources/shipping-api-integrations.html](https://www.odfl.com/us/en/resources/shipping-api-integrations.html)
-- **Base URL:** `https://www.odfl.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Old Dominion Freight Line Plans Pricing](https://apis.io/plans/old-dominion-freight-line/old-dominion-freight-line-plans-pricing/)
 
-- Freight
-- Logistics
-- Pickup
-- Shipping
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Pickup%20API%20Development%20Guide.pdf)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-pickup-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/old-dominion-freight-line-bill-of-lading-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-bill-of-lading-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-document-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-document-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-pickup-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-pickup-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-tracking-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-tracking-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Old Dominion Freight Line Rate Limits](https://apis.io/rate-limits/old-dominion-freight-line/old-dominion-freight-line-rate-limits/)
 
-### ODFL Tracking API
+#### FinOps (1)
 
-Provides shipment status information for ODFL freight movements. Used to integrate real-time and historical freight tracking data into shipper and partner systems.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://www.odfl.com/us/en/resources/shipping-api-integrations.html](https://www.odfl.com/us/en/resources/shipping-api-integrations.html)
-- **Base URL:** `https://www.odfl.com`
+- [Old Dominion Freight Line Finops](https://apis.io/finops/old-dominion-freight-line/old-dominion-freight-line-finops/)
 
-#### Tags
+## Where to find this API
 
-- Freight
-- Shipping
-- Tracking
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Tracking%20API%20Development%20Guide.pdf)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-tracking-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/old-dominion-freight-line-bill-of-lading-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-bill-of-lading-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-document-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-document-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-pickup-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-pickup-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-tracking-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-tracking-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### ODFL Document API
-
-Retrieves PDF documents associated with shipments, including bills of lading and delivery receipts, by PRO number. Used to programmatically pull shipment documentation from Old Dominion Freight Line.
-
-- **Human URL:** [https://www.odfl.com/us/en/resources/shipping-api-integrations.html](https://www.odfl.com/us/en/resources/shipping-api-integrations.html)
-- **Base URL:** `https://www.odfl.com`
-
-#### Tags
-
-- Documents
-- Freight
-- Shipping
-
-#### Properties
-
-- [Documentation](https://www.odfl.com/content/dam/odfl/us/en/documents/web-services/Document%20API%20Development%20Guide.pdf)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/openapi/old-dominion-freight-line-document-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/old-dominion-freight-line-bill-of-lading-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-bill-of-lading-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-document-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-document-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-pickup-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-pickup-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/old-dominion-freight-line-tracking-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/old-dominion-freight-line-tracking-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/old-dominion-freight-line)
 - [Website](https://www.odfl.com)
-- [Developer](https://www.odfl.com/us/en/resources/shipping-api-integrations.html)
-- [Support](mailto:api@odfl.com)
-- [Tools](https://www.odfl.com/us/en/resources.html)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** API Evangelist
-**Email:** info@apievangelist.com
+**Kin Score 24.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 51.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 5.3 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/old-dominion-freight-line/](https://apis.io/providers/old-dominion-freight-line/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Old Dominion Freight Line: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/old-dominion-freight-line/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
